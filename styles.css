@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  background: #202731;
+}
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+.bg-1 {
+  background-color: #0a716c;
+}
+
+.shape-1 {
+  position: absolute;
+  background-image: url("./shapes.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -5rem;
+  margin-left: -30rem;
+  width: 450px;
+  height: 450px;
+  opacity: 0.5;
+}
+.shape-2 {
+  background-image: url("./blob.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: -20rem;
+  width: 450px;
+  height: 450px;
+  opacity: 0.5;
+  -webkit-animation: spin 15s linear infinite;
+  -moz-animation: spin 15s linear infinite;
+  animation: spin 15s linear infinite;
+}
+.shape-3 {
+  position: absolute;
+  background-image: url("./1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -25rem;
+  width: 450px;
+  height: 450px;
+  -webkit-animation: spin 30s linear infinite;
+  -moz-animation: spin 30s linear infinite;
+  animation: spin 30s linear infinite;
+}
+.bird {
+  position: absolute;
+  background-image: url("./1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -18rem;
+  width: 400px;
+  height: 400px;
+}
+.psk {
+  position: absolute;
+  background-image: url("./psk.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -12rem;
+  width: 200px;
+  height: 200px;
+}
+.updown-animation {
+  animation-name: infiniteupdown;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 0.3s;
+}
+
+.blur {
+  position: absolute;
+  background-image: url("./blur.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -12rem;
+  margin-left: 30rem;
+  width: 1000px;
+  height: 1000px;
+  opacity: 0.7;
+}
+
+@keyframes infiniteupdown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -webkit-animation: forwards;
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#loop {
+  display: flex;
+  position: absolute;
+  margin-top: -3rem;
+  width: 100%;
+  font-size: 150px;
+  white-space: nowrap;
+  font-family: gilroy;
+}
+
+#loop > h1 {
+  font-weight: 400;
+  animation-name: anim;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#loop > h1 > span {
+  -webkit-text-stroke: 1.2px #000;
+  color: transparent;
+  font-weight: 500;
+}
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* @media (max-width: 575px) {
+  .shape-1 {
+    margin-top: -5rem;
+    margin-left: -30rem;
+    width: 450px;
+    height: 450px;
+  }
+  .shape-2 {
+    margin-left: -1rem;
+    margin-top: -15rem;
+    width: 250px;
+    height: 220px;
+  }
+  .shape-3 {
+    margin-left: -1rem;
+    margin-top: -15rem;
+    width: 250px;
+    height: 220px;
+  }
+  .blur {
+    margin-top: -12rem;
+    margin-left: 1rem;
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shape-1 {
+    margin-left: 20rem;
+  }
+  .shape-2 {
+    margin-left: -1rem;
+    margin-top: -15rem;
+    width: 300px;
+    height: 280px;
+  }
+  .shape-3 {
+    margin-left: -1rem;
+    margin-top: -15rem;
+    width: 300px;
+    height: 280px;
+  }
+  .blur {
+    margin-left: 5rem;
+    width: 1000px;
+    height: 1000px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .shape-1 {
+    margin-top: -5rem;
+    margin-left: -30rem;
+    width: 450px;
+    height: 450px;
+  }
+  .blur {
+    margin-left: 10rem;
+    width: 1000px;
+    height: 1000px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .blur {
+    margin-left: 30rem;
+  }
+} */
